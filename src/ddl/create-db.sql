@@ -1,4 +1,4 @@
-IF NOT EXISTS articles
+CREATE TABLE IF NOT EXISTS articles
 (
     id    INT AUTO_INCREMENT
         PRIMARY KEY,
