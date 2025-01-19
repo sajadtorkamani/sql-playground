@@ -1,0 +1,14 @@
+services:
+    mysql:
+        image: mysql:9.1.0
+        restart: always
+        container_name: sql-playground
+        environment:
+            MYSQL_ROOT_PASSWORD: password
+        ports:
+            - "3306:3306"
+        volumes:
+            - sql-playground:/var/lib/mysql
+
+volumes:
+    sql-playground:
