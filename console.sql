@@ -1,8 +1,3 @@
--- auto-generated definition
-CREATE TABLE comments
-(
-    id   INT AUTO_INCREMENT
-        PRIMARY KEY,
-    content VARCHAR(255) NOT NULL
-);
-
+select *,
+       ROW_NUMBER() OVER (partition by email) AS email_order
+from users;
